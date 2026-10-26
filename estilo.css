@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;700&display=swap");
+
+/* ---------- Variáveis ---------- */
+:root {
+    --rosa-claro: #deb9af;
+    --roxo: #716083;
+    --bege: #deb9af;
+    --escuro: #050505;
+    --card: #100f10;
+    --claro: #f9e7e0;
+    --cinza: #a9a3a0;
+    --cinza-escuro: #7a756f;
+
+    --raio-sm: 8px;
+    --raio-md: 12px;
+    --header-altura: 72px;
+}
+
+/* ---------- Reset e base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--escuro);
+    color: var(--bege);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+summary {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+section {
+    scroll-margin-top: var(--header-altura);
+}
+
+section > h2 {
+    font-size: 38px;
+    padding: 48px 40px 0;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+    outline: 2px solid var(--bege);
+    outline-offset: 3px;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--escuro);
+    border-bottom: 1px solid var(--roxo);
+}
+
+.logo {
+    font-size: 30px;
+}
+
+nav a {
+    color: var(--claro);
+    text-decoration: none;
+    margin-left: 24px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--bege);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 0 0 40px;
+    overflow: hidden;
+}
+
+.hero-texto h2 {
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1;
+}
+
+.hero-texto p {
+    margin: 16px 0 24px;
+    max-width: 46ch;
+    color: var(--cinza);
+}
+
+.hero-img {
+    width: 45%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.botao-cta {
+    display: inline-block;
+    background: var(--bege);
+    color: var(--escuro);
+    padding: 16px 40px;
+    border-radius: var(--raio-md);
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.botao-cta:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Grades ---------- */
+.grade-produtos,
+.grade-perfumes {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+    padding: 40px;
+}
+
+.grade-produtos {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grade-perfumes {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--card);
+    border: 1px solid var(--roxo);
+    border-radius: var(--raio-md);
+    padding: 12px;
+    text-align: center;
+}
+
+.card img {
+    width: 55%;
+    margin-inline: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--raio-sm);
+}
+
+.card h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    color: var(--claro);
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--cinza);
+}
+
+.card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--bege);
+}
+
+/* ---------- Detalhes (acordeão) ---------- */
+details {
+    background: var(--card);
+    border: 1px solid var(--roxo);
+    border-radius: var(--raio-sm);
+    padding: 16px 24px;
+    margin: 12px 40px;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--claro);
+}
+
+details[open] summary {
+    color: var(--bege);
+}
+
+details img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--raio-sm);
+    margin-top: 16px;
+}
+
+details p {
+    margin-top: 12px;
+    max-width: 60ch;
+    color: var(--cinza);
+}
+
+/* ---------- Rodapé e newsletter ---------- */
+footer {
+    margin-top: 40px;
+    border-top: 2px solid var(--roxo);
+    padding: 40px;
+    text-align: center;
+}
+
+.newsletter label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.newsletter input {
+    padding: 12px;
+    border-radius: var(--raio-sm);
+    border: 1px solid var(--roxo);
+    background: var(--card);
+    color: var(--claro);
+    width: 260px;
+    max-width: 100%;
+}
+
+.newsletter input::placeholder {
+    color: var(--cinza-escuro);
+}
+
+.newsletter button {
+    padding: 12px 24px;
+    background: var(--bege);
+    color: var(--escuro);
+    border: none;
+    border-radius: var(--raio-sm);
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.newsletter button:hover {
+    opacity: 0.85;
+}
+
+.copyright {
+    margin-top: 24px;
+    color: var(--cinza-escuro);
+    font-size: 14px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1000px) {
+    .grade-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grade-perfumes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 14px 20px;
+    }
+
+    nav a {
+        margin-left: 14px;
+        font-size: 14px;
+    }
+
+    section > h2 {
+        font-size: 32px;
+        padding: 40px 20px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        padding: 40px 0 0;
+        min-height: auto;
+    }
+
+    .hero-texto {
+        padding: 0 20px;
+    }
+
+    .hero-texto p {
+        margin-inline: auto;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .grade-produtos,
+    .grade-perfumes {
+        padding: 24px 20px;
+    }
+
+    .grade-perfumes {
+        grid-template-columns: 1fr;
+    }
+
+    details {
+        margin: 12px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
