@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Primeira linha obrigatória: informa ao navegador que é HTML5 -->
+<html lang="pt-br">
+<!-- lang define o idioma: importante para acessibilidade e SEO -->
+
+<head>
+    <!-- O head guarda configurações que NÃO aparecem na página -->
+    <meta charset="UTF-8">
+    <!-- charset garante que acentos (ç, ã, é) apareçam corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport: faz a página se adaptar ao celular (responsividade) -->
+    <title>Spears — musica para sua casa</title>
+    <!-- title: é o texto que aparece na ABA do navegador -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- AQUI o HTML aponta para o arquivo de estilo separado -->
+</head>
+
+<body>
+    <!-- O body guarda TODO o conteúdo visível da página -->
+
+    <!-- ============ HEADER ============ -->
+    <!-- Cabeçalho: logo + menu de navegação -->
+    <header>
+        <h1 class="logo">Spears</h1>
+        <nav>
+            <!-- nav: agrupa os links de navegação do site -->
+            <a href="#hero">Início</a>
+            <a href="#produtos">Albuns</a>
+            <a href="#depoimentos">Produtos</a>
+            <a href="#faq">Dúvidas</a>
+        </nav>
+    </header>
+
+    <!-- ============ HERO SECTION ============ -->
+    <!-- A primeira impressão: o que aparece sem rolar a página -->
+    <section id="hero" class="hero">
+        <div class="hero-texto">
+            <h2>Traga a Princesa do Pop para dentro da sua casa</h2>
+            <!-- h2 aqui, porque o h1 já foi usado no logo -->
+            <p>Albuns selecionados para cada momento da sua vida.
+               Entrega rapida de 30 dias.</p>
+            <!-- CTA: Call to Action — o botão que converte -->
+            <a href="#produtos" class="botao-cta">ver albuns</a>
+        </div>
+        <img src="https://www.rollingstone.com/wp-content/uploads/2011/03/britneyspears.jpg?w=1500&h=1000&crop=1"
+             alt="Vaso de planta decorativa em ambiente interno">
+        <!-- alt é OBRIGATÓRIO: descreve a imagem para leitores de tela -->
+    </section>
+
+    <!-- ============ SHOWCASE DE PRODUTOS ============ -->
+    <!-- Vitrine: grid de cards com os produtos -->
+    <section id="produtos" class="produtos">
+        <h2>nossos albuns</h2>
+        <ul class="grade-produtos">
+            <!-- ul + li: lista semântica para os cards -->
+            <li class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/b/b6/Capa_do_%C3%A1lbum_Baby_One_More_Time_por_Britney_Spears.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"
+                     alt="Samambaia em vaso suspenso">
+                <h3>...Baby One More Time</h3>
+                <p>lançada em 1999, marcou a transição definitiva da música pop juvenil, transformando a cantora em um ícone global e definindo a estética dos anos 2000</p>
+                <span class="preco">R$ 150,00</span>
+            </li>
+            <li class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/4/44/Capa_de_Oops_It_Did_Again_de_Britney_Spears_%282000%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"
+                     alt="Suculenta em vaso pequeno de cerâmica">
+                <h3>Oops... I Did It Again</h3>
+                <p>lançada nos anos 2000, explora a ideia do amor como um jogo e marcam a transição da imagem puramente inocente da artista para uma jovem consciente do próprio poder e atração.</p>
+                <span class="preco">R$ 210,00</span>
+            </li>
+            <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkeT5NRohlZ8k_Xhbudrav4t9HHgk3vcxMhyOETNtQdw&s=10"
+                     alt="Costela de adão em vaso branco">
+                <h3>Britney</h3>
+                <p>lançada em 2001, marca a transição da artista de ícone teen para uma mulher adulta, sensual e no controle de sua própria identidade artística.</p>
+                <span class="preco">R$ 120,00</span>
+            </li>
+            <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wStAnr9lGh6Y0R1OGbJcRu1h0q9IsaovZgzP4AgsEw&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>In The Zone</h3>
+                <p>lançada em 2003, representa a transição definitiva da artista de ídolo teen para uma mulher adulta, independente e sexualmente confiante.</p>
+                <span class="preco">R$ 189,00</span>
+            </li>
+        <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZTXL77dGn5PQiYJ8KD3w4cVvrnFpAYaHOwKfguS5J0Q&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>blackout</h3>
+                <p>lançada em 2007,  O álbum foi criado em um dos períodos mais conturbados da vida pessoal e pública de Britney, sob intenso escrutínio da mídia e dos paparazzi.</p>
+                <span class="preco">R$ 325,00</span>
+            </li>
+            <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPpIjfjUEsc29b3ITxK-ufnsgiK6t8v0nFoVIEv02v3w&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Circus</h3>
+                <p>lançada em 2008, usa a metáfora do circo como uma representação da sua própria vida sob os holofotes, transformando o caos da fama e o escrutínio da mídia em um espetáculo de poder e controle.</p>
+                <span class="preco">R$ 130,00</span>
+            </li>
+            <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfd4DSCUvDuAXT2NSelHCO0xKZTrD1KEqY6tlPtg4ZA&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Femme Fatale</h3>
+                <p>lançada em 2011, remete ao arquétipo clássico da mulher sedutora, misteriosa, glamourosa e perigosa que atrai e desafia quem está ao seu redor.</p>
+                <span class="preco">R$ 730,00</span>
+            </li>
+             <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWWFVQOkUWGxkbSKRzG2oXgd0Syxc-NorOG4s2pIBrg&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Britney Jean</h3>
+                <p>lançada em 2013, a cantora batizou o oitavo álbum de estúdio com esse nome para transmitir a ideia de um trabalho mais íntimo, confessional e próximo aos fãs, como se estivesse abrindo a porta de sua vida particular.</p>
+                <span class="preco">R$ 450,00</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ============ PROVA SOCIAL ============ -->
+    <!-- Depoimentos: pessoas confiam em pessoas -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>nossos livros</h2>
+        <div class="grade-depoimentos">
+            <li class="card">
+                <img src="https://m.media-amazon.com/images/I/71sHA8WZbZL._UF350,350_QL50_.jpg"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>A Mulher em Mim</h3>
+                <p>É o livro de memórias oficial da cantora. Lançado em outubro de 2023, a obra aborda sua ascensão meteórica no pop, a infância, a tutela judicial que controlou sua vida por mais de uma década, a maternidade e a luta para recuperar sua própria voz.</p>
+                <span class="preco">R$ 119,90</span>
+            </li>
+             <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9sR2zncclxg9IK_UHYUuZtC05u3zX0q_A04LjinAGQ&s=10_"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Menina Perdida</h3>
+                <p>Uma biografia não-oficial que analisa a ascensão e os desafios da artista como estrela-mirim em Hollywood.</p>
+                <span class="preco">R$ 75,00</span>
+            </li>
+            <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn19XbORqzEd_iS-GszP40r5EfUFiR9PxhsdNvU0nxLQ&s"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Por Britney</h3>
+                <p>É um ensaio crítico e íntimo que usa a trajetória de Britney Spears como ponto de partida para refletir sobre a cultura do espetáculo, a objetificação dos corpos femininos e a violência midiática.</p>
+                <span class="preco">R$ 70,00</span>
+            </li>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <!-- Acordeão NATIVO: details + summary, sem JavaScript! -->
+    <section id="faq" class="faq">
+        <h2>perfumes</h2>
+
+        <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtrVnUxcd_rnecCE_p3AzvgdUP1oOA06MMb7yvaU041Q&s"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Fantasy</h3>
+                <p>O mais famoso da marca. É uma fragrância floral frutal gourmand com notas de líchia vermelha, kiwi, marmelo, acorde caramelado, chocolate branco e almíscar.</p>
+                <span class="preco">R$ 239,00</span>
+            </li>
+
+        <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThlA3AqYsbXBMWisPbxjjF2TtTWTn47IHnJ2kIRmfzLA&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Midnight Fantasy</h3>
+                <p>• Uma versão mais noturna e sensual, focada em notas de ameixa e cereja preta.</p>
+                <span class="preco">R$ 249,00</span>
+            </li>
+
+        <li class="card">
+                <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWavQg84n0Z1vgaluzBvONi8W67CbYycvSgMD75mbWgA&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Naked Fantasy</h3>
+                <p>Sensual e aconchegante, feito para parecer o cheiro da própria pele com notas de pêssego, lichia e macarrons.</p>
+                <span class="preco">R$ 270,00</span>
+            </li>
+
+        <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfC560ZHYCVhs2pQMsoB3vxOQdVT7AFSLmY6hrhrEbuQ&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Candied Fantasy</h3>
+                <p>Doce e divertido com acordes marcantes de chiclete de morango e hibisco.</p>
+                <span class="preco">R$ 263,00</span>
+            </li>
+
+        <li class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIOyVQLsVC31OEwZJqEl7vS0PVywAaNLp553QmN9ptA&s=10"
+                     alt="Jiboia pendurada em suporte de parede">
+                <h3>Fantasy Blissful</h3>
+                <p>é um perfume feminino da família olfativa Floral Amadeirado, lançado em 2022. Diferente de outras fragrâncias mais doces e açucaradas da linha Fantasy, ele aposta em um perfil floral branco e ensolarado.</p>
+                <span class="preco">R$ 200,00</span>
+            </li>
+    </section>
+
+    <!-- ============ FOOTER + NEWSLETTER ============ -->
+    <!-- Rodapé: fecha a navegação com formulário de e-mail -->
+    <footer>
+        <form class="newsletter">
+            <label for="email">receba dicas de cuidado com os albuns:</label>
+            <!-- label com for ligado ao id do input: acessibilidade -->
+            <input type="email" id="email" name="email"
+                   placeholder="seu@email.com" required>
+            <!-- type="email" valida o formato sozinho no navegador -->
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="copyright">© 2026 — Spears • Desenvolvido por Julia Cibulski</p>
+    </footer>
+
+</body>
+</html>
